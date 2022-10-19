@@ -13,3 +13,5 @@ def test_guest_should_see_login_link(browser):
     page.open()
     page.should_be_login_link()
 
+def should_be_login_link(self):
+    assert self.is_element_present(By.CSS_SELECTOR, "#login_link_invalid"), "Login link is not presented"
