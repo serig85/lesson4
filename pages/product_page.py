@@ -20,3 +20,12 @@ class ProductPage(BasePage):
     def text_cost_of_the_basket(self):
         cost_of_the_basket= self.browser.find_element(*ProductPageLocators.COST_OF_THE_BASKET)
         return cost_of_the_basket.text
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.MES_PROD_ADD), \
+           "Success message is presented, but should not be"
+
+    def should_is_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.MES_PROD_ADD), \
+           "Success message is presented, but is_disappeared"
+
