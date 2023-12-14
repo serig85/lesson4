@@ -7,6 +7,9 @@ class BasePageLocators():
 
 class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    BUTTON_BASKET=(By.XPATH, "//div[@class ='basket-mini pull-right hidden-xs']//a[@class = 'btn btn-default']")
+    BLOCK_PRODUCTS_IN_THE_SHOPPING_CART=(By.XPATH, "//div[@class = 'basket-title hidden-xs']")
+    BLOCK_BASKET_EMPTY=(By.XPATH, "//div[@id ='content_inner']/p")
 
 class LoginPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
