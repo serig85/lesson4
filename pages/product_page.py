@@ -1,7 +1,9 @@
+
 from .base_page import BasePage
+from .basket_page import BasketPage
 from .locators import ProductPageLocators
 
-class ProductPage(BasePage):
+class ProductPage(BasePage, BasketPage):
     def click_add_to_basket(self):
         btn_add = self.browser.find_element(*ProductPageLocators.BTN_ADD)
         btn_add.click()
@@ -28,4 +30,5 @@ class ProductPage(BasePage):
     def should_is_disappeared(self):
         assert self.is_disappeared(*ProductPageLocators.MES_PROD_ADD), \
            "Success message is presented, but is_disappeared"
+
 
