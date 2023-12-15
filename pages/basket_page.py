@@ -14,4 +14,3 @@ class BasketPage():
     def should_not_be_block_products_in_the_shopping_cart(self):
         assert self.is_not_element_present(*BasketPageLocator.BLOCK_PRODUCTS_IN_THE_SHOPPING_CART), \
            "Success message is presented, but should not be"
-
